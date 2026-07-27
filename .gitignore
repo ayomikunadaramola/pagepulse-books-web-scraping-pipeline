@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Logs
+logs/*.log
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+
+# Optional generated datasets
+# Uncomment these if you do not want to push generated data
+# data/raw_data/*
+# data/cleaned_data/*
