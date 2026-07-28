@@ -8,6 +8,44 @@
 
 ---
 
+An end-to-end data engineering project that extracts book listings from the web, transforms the data with Pandas, loads it into PostgreSQL, and performs SQL analysis.
+
+## 🏗️ Data Pipeline Architecture
+
+```mermaid
+flowchart LR
+    A["📚 Books to Scrape<br/>Data Source"]
+    B["🌐 Python Requests<br/>HTTP Extraction"]
+    C["🍲 BeautifulSoup<br/>Static HTML Parsing"]
+    D["🤖 Selenium<br/>Dynamic Page Rendering"]
+    E["🐼 Pandas<br/>Cleaning & Transformation"]
+    F["📄 Raw and Cleaned CSV<br/>File Storage"]
+    G["🐘 PostgreSQL<br/>Data Storage"]
+    H["🔍 SQL Analysis<br/>Business Insights"]
+
+    A --> B
+    B --> C
+    B --> D
+    C --> E
+    D --> E
+    E --> F
+    E --> G
+    G --> H
+
+    classDef source fill:#f5f3ff,stroke:#6d28d9,stroke-width:2px,color:#111827;
+    classDef extraction fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#111827;
+    classDef processing fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#111827;
+    classDef storage fill:#fff7ed,stroke:#ea580c,stroke-width:2px,color:#111827;
+    classDef analysis fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#111827;
+
+    class A source;
+    class B,C,D extraction;
+    class E processing;
+    class F,G storage;
+    class H analysis;
+```
+
+
 # Project Overview
 
 PagePulse Books Limited is a fictional online bookstore that wants to monitor book prices, stock availability and customer ratings from competitor websites.
